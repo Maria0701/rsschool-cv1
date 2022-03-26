@@ -1,7 +1,7 @@
 
-#Baranova Maria Nikolaevna
+# Baranova Maria Nikolaevna
 [reflection2008@gmail.com](mailto:reflecton2008@gmail.com)
-##Personal information
+## Personal information
 
 I started as self-taught web-developer, mostly creating simple web sites and web pages with pure html and css for fun. As I decided to  
 focus on frontend, I have been studying every aspect of frontend development and am eager to continue studying
