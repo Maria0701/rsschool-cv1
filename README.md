@@ -1,1 +1,1 @@
-# rsschool-cv
+https://github.com/Maria0701/rsschool-cv/blob/gh-pages/cv
