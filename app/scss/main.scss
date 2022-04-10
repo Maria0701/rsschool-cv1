@@ -1,0 +1,106 @@
+html {
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+
+@mixin fontface($family, $localname, $filename, $weight, $style) {
+    @font-face {
+        font-display: swap;
+        font-family: $family;
+        src: local('#{$localname}'), 
+        /*url('../fonts/#{$filename}.woff2') format('woff2'),*/
+        url('../fonts/#{$filename}.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+@include fontface('Arial', 'ArialMT', ArialMT, 400, normal);
+@include fontface('Arial', 'Arial-BoldMT', Arial-BoldMT, 700, normal);
+@include fontface('Georgia', 'Georgia', Georgia, 400, normal);
+@include fontface('Georgia', 'Georgia', Georgia, 700, normal);
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 400;
+    color: var(--textColor);
+    font-style: normal;
+    background: var(--white);
+}
+
+main {
+    flex-grow: 1;
+    background-color: var(--white);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden:not(:focus) {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.body {
+    position: relative;
+}
+
+.table-responsive {
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    max-width: 1364px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+
+
+
+
+
+
