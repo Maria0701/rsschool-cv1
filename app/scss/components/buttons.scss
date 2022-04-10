@@ -1,0 +1,37 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 45px;
+    border-radius: 100px;
+    font-family: var(--font-georgia);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-3xl);
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out;    
+}
+
+.button--primary {
+
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+
+    &:hover,
+    &:focus {
+        @include card-hover;
+    }
+}
+
+.button--dark {
+    background-color: var(--color-light-xl);
+    border: 2px solid var(--color-primary);
+
+    &:hover,
+    &:focus {
+        @include card-hover;        
+    }
+}

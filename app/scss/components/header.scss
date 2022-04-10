@@ -1,0 +1,18 @@
+.header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.header--main {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
