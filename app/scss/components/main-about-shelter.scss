@@ -1,0 +1,27 @@
+.about__wrapper {
+    display: flex;
+    align-items: center;
+    grid-gap: 120px;
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    max-width: 910px;
+}
+
+.about__h2 {
+    margin-bottom: var(--margin-standart);
+}
+
+.about__content {
+    @include paragraph-l;
+
+    p {
+        margin-top: 0;
+        &:not(:last-child) {
+            margin-bottom: var(--margin-standart);
+        }
+    }
+}
+
+.about__img-wrapper {
+    flex-basis: 300px;
+}
