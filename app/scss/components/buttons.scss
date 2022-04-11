@@ -35,3 +35,30 @@
         @include card-hover;        
     }
 }
+
+.button-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-primary);
+        cursor: pointer;
+    }
+
+    &:disabled {
+        color: var(--color-dark-s);
+        border-color: var(--color-dark-s);
+    }
+}
+
+.button-circle--active {
+    background-color: var(--color-primary);
+}

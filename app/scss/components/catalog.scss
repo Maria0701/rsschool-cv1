@@ -1,0 +1,22 @@
+.catalog {
+    background-color: var(--color-light-l);
+}
+
+.catalog__wrapper {
+    display: grid;
+    grid-row-gap: 60px;
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+}
+
+.catalog__title {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.catalog__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 30px;
+}

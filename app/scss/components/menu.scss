@@ -32,7 +32,16 @@
     &:hover,
     &:focus {
         color: var(--color-light-s);
-        cursor: pointer
+        cursor: pointer        
+    }
+
+    .header--inside & {
+        color: var(--color-dark-l);
+
+        &:hover,
+        &:focus {
+            color: var(--color-dark-3xl);
+        }
     }
 }
 
@@ -40,4 +49,8 @@
     left: 0;
     width: 100%;
     background-color: var(--color-primary);
+
+    .header--inside & {
+        color: var(--color-dark-l);
+    } 
 }
