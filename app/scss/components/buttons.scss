@@ -10,6 +10,7 @@
     font-size: 17px;
     line-height: 130%;
     letter-spacing: 0.06em;
+    text-decoration: none;
     color: var(--color-dark-3xl);
     box-sizing: border-box;
     transition: background-color 0.3s ease-in-out;    
@@ -46,6 +47,7 @@
     background-color: transparent;
     border: 2px solid var(--color-primary);
     border-radius: 50%;
+    box-sizing: border-box;
     transition: background-color 0.3s ease-in-out;
 
     &:hover,
@@ -54,9 +56,20 @@
         cursor: pointer;
     }
 
-    &:disabled {
+    &:disabled,
+    &[data-disabled="true"] {
         color: var(--color-dark-s);
         border-color: var(--color-dark-s);
+
+        svg {
+            color: var(--color-dark-s);
+        }
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            cursor: auto;
+        }
     }
 
     svg {
@@ -66,4 +79,9 @@
 
 .button-circle--active {
     background-color: var(--color-primary);
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-primary-light);
+    }
 }

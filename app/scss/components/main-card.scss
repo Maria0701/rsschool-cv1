@@ -42,10 +42,12 @@
     padding-right: 15px;
     margin-top: 0;
     margin-bottom: 0;
+    color: var(--color-dark-l);
     font-family: var(--font-georgia);
     font-size: 20px;
     line-height: 115%;
     letter-spacing: 0.06em;
+    text-decoration: none;
     background-color: var(--color-primary);
     border-radius: 9px;
 
@@ -54,6 +56,11 @@
         width: 30px;
         height: 23px;
         margin-right: 15px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-primary-light);
     }
 }
 

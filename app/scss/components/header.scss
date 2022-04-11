@@ -17,6 +17,13 @@
     justify-content: space-between;
 }
 
+.header--inside {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--color-light-xl);
+}
+
 .header--inside .header__logo {
     color: var(--color-dark-l);
 }

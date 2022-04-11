@@ -36,10 +36,16 @@
     line-height: 115%;
     letter-spacing: 0.06em;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
 
     svg {
         flex-shrink: 0;
         display: block;
         margin-right: 20px;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--color-primary-light);
     }
 }

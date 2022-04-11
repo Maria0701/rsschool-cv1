@@ -7,6 +7,9 @@
 
 .pagination__item {
     color: var(--color-dark-3xl);
+    font-family: var(--font-georgia);
+    font-size: 20px;
+    line-height: 115%;
 }
 
 .pagination__item:last-child,
