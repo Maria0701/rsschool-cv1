@@ -1,0 +1,15 @@
+.pagination {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.pagination__item {
+    color: var(--color-dark-3xl);
+}
+
+.pagination__item:last-child,
+.pagination__item:nth-last-child(2) {
+    transform: scale(-1,1);
+}

@@ -42,6 +42,7 @@
     align-items: center;
     width: 52px;
     height: 52px;
+    text-decoration: none;
     background-color: transparent;
     border: 2px solid var(--color-primary);
     border-radius: 50%;
@@ -56,6 +57,10 @@
     &:disabled {
         color: var(--color-dark-s);
         border-color: var(--color-dark-s);
+    }
+
+    svg {
+        display: block;
     }
 }
 
