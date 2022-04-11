@@ -1,0 +1,37 @@
+.main-top {
+    padding-top: 180px;
+    background: var(--color-dark-3xl);
+    background: var(--start-screen-gradient-background);
+}
+
+.main-top__wrapper {
+    display: flex;
+}
+
+.main-top__content {
+    flex-basis: 460px;
+    padding-top: 163px;
+    margin-right: 42px;
+    color: var(--color-light-xl);
+}
+
+.main-top__h1 {
+    margin-top: 0;
+    margin-bottom: 42px;
+    width: 310px;
+    font-family: var(--font-georgia);
+    font-style: normal;
+    font-size: 44px;
+    line-height: 130%;
+}
+
+.main-top__text {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.main-top__button {
+    display: inline-block;
+    left: -2px;
+    position: relative;
+}

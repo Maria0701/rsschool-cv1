@@ -1,0 +1,63 @@
+.friend-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--color-dark-l);
+    background-color: var(--color-light-l);
+    border-radius: 9px;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease-in-out, 
+        background-color 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-light-xl);
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+        & .button {
+            @include card-hover;
+        }
+
+    }
+}
+
+.friend__img-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.friend__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    transform: translate(-50%,-50%);
+}
+
+.friend__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.friend__name {
+    font-family: var(--font-georgia);
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+}
+
+.friend__text {
+    display: none;
+}
+

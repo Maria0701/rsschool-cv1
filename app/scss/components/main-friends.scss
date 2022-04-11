@@ -1,0 +1,20 @@
+.main-friends {    
+    color: var(--color-dark-l);
+    background-color: var(--color-light-l);
+}
+
+.main-friends__wrapper {
+    display: grid;
+    justify-items: center;
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+}
+
+.main-friends__h2 {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.main-friends__slider {    
+    margin-bottom: 60px;
+}

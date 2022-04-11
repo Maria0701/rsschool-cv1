@@ -1,0 +1,22 @@
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;   
+}
+
+.logo__name {
+    @include logo-title;
+    margin-bottom: 10px; 
+    
+    .header--main & {
+        color: var(--color-primary);
+    }
+}
+
+.logo__subname {
+    @include logo-subtitle;
+
+    .header--main & {
+        color: var(--color-light-xl);
+    }
+}
