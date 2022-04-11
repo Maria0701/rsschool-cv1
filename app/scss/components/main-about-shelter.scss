@@ -1,10 +1,10 @@
 .about__wrapper {
     display: flex;
     align-items: center;
-    grid-gap: 120px;
+    grid-gap: 117px;
     padding-top: var(--padding-top);
     padding-bottom: var(--padding-bottom);
-    max-width: 910px;
+    max-width: 927px;
 }
 
 .about__h2 {
@@ -13,11 +13,15 @@
 
 .about__content {
     @include paragraph-l;
+    display: grid;
+    align-content: center;
 
     p {
-        margin-top: 0;
-        &:not(:last-child) {
-            margin-bottom: var(--margin-standart);
+        margin-top: 0;        
+        margin-bottom: var(--margin-standart);
+        
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }
