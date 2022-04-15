@@ -46,3 +46,29 @@
         max-width: 430px;
     }
 }
+
+@media (max-width: 600px) {
+    .about__wrapper {
+        padding-top: 42px;
+        padding-bottom: 42px;
+        grid-gap: 42px;
+    }
+
+    .about__h2 {
+        text-align: center;
+        font-size: 25px;
+        line-height: 130%;
+    }
+
+    .about__content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .about__content p {
+        margin-bottom: 22px;
+        font-size: 15px;
+        line-height: 160%;
+        text-align: justify;
+    }
+}

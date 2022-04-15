@@ -18,3 +18,20 @@
 .main-friends__slider {    
     margin-bottom: 60px;
 }
+
+@media (max-width: 600px) {
+    .main-friends__wrapper {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+
+    .main-friends__h2 {
+        font-size: 25px;
+        line-height: 130%;
+        margin-bottom: 42px;
+    }
+
+    .main-friends__slider {
+        margin-bottom: 42px;
+    }
+}

@@ -28,3 +28,40 @@
     color: var(--color-dark-l);
 }
 
+.header__toggler {
+    display: none;
+}
+
+@media (max-width: 760px) {
+    .header__menu {
+        display: none;
+    }
+
+    .header__toggler {
+        display: block;
+    }
+
+    .header__wrapper {
+        padding-right: 53px;
+    }
+
+    .header__toggler {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        width: 30px;
+        height: 22px;
+        background-color: transparent;
+        border: 0;
+
+        span {
+            display: block;
+            width: 30px;
+            height:2px;
+            background-color: var(--color-primary);
+        }
+    }
+}
+

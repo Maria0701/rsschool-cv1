@@ -55,18 +55,30 @@
     margin-bottom: -60px;
 }
 
-@media (max-width: $tablet) {
+@media (max-width: 1246px) {
     .footer__wrapper  {
         grid-template-columns: 1fr 1fr;
+        grid-column-gap: 34px;
+        grid-row-gap: 65px;
+        padding-top: 30px;
+        padding-right: 64px;
+        padding-left: 64px;
+        justify-content: space-around;
     }
-    
+
     .footer__img-wrapper {
-        //justify-self: center;
+        margin-left: 0;
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 3;        
+
         img {
             margin-right: auto;
             margin-left: auto;
         }
+    }
+
+    .footer__item {
+        grid-gap: 33px;
+        padding-top: 0;
     }
 }

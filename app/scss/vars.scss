@@ -28,6 +28,10 @@ $mobile: 320px;
     @media (max-width: $tablet) {
         --padding: 30px;
     }
+
+    @media (max-width: 600px) {
+        --padding: 10px;
+    }
 }
 
 

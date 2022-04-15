@@ -71,3 +71,32 @@
         border-radius: 100px;
     }
 }
+
+@media (max-width: 600px) {
+    .main-top__content {
+        display: grid;
+        grid-gap: 42px;
+        justify-items: center;
+    }
+    .main-top__h1 {
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .main-top__text {
+        font-size: 15px;
+        line-height: 160%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .main-top__content {
+        margin-bottom: 105px;
+    }
+
+    .main-top__img-wrapper {
+        padding-left: 40px;
+    }
+}
