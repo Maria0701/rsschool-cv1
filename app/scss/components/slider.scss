@@ -60,3 +60,15 @@
     transform: translateY(-50%);
 }
 
+@media (max-width: $tablet) {
+
+    .slider {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .slider__list {
+        grid-gap: 40px;
+    }
+}
+

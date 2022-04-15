@@ -54,3 +54,10 @@
         color: var(--color-dark-l);
     } 
 }
+
+@media (max-width: 768px) {
+
+    .header--main {
+        top: 0;
+    }
+}

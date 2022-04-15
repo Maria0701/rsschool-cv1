@@ -3,10 +3,12 @@
 }
 
 .card__wrapper {
+    display: flex;
+    grid-gap: 30px;
     padding-top: var(--padding-top);
     padding-bottom: var(--padding-bottom);
-    padding-right: 142px;
-    padding-left: 142px;
+    padding-right: 182px;
+    padding-left: 182px;
 }
 
 .card__h2 {
@@ -17,10 +19,7 @@
     display: grid;
     justify-items: flex-start;
     grid-gap: 19px;
-    padding-left: 575px;
-    padding-right: 40px;
-    background-position: center left 40px;
-    background-repeat: no-repeat;
+    max-width: 380px;
 }
 
 .card__bank {
@@ -70,4 +69,23 @@
     font-size: 12px;
     line-height: 150%;
     color: var(--color-dark-m);
+}
+
+.card__img-wrapper {
+    display: flex;
+    align-items: baseline;
+}
+
+@media (max-width: $tablet) {
+    .card__wrapper {
+        flex-direction: column;
+        grid-gap: 60px;
+        align-items: center;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .card__img-wrapper {
+        order: 1;
+    }
 }

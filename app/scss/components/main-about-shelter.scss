@@ -30,3 +30,19 @@
     flex-basis: 300px;
     flex-shrink: 0;
 }
+
+@media (max-width: $tablet) {
+    .about__wrapper {
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 80px;
+    }
+
+    .about__img-wrapper {
+        order: 1;
+    }
+
+    .about__content {
+        max-width: 430px;
+    }
+}

@@ -5,11 +5,10 @@
 
 .footer__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr auto;
     grid-gap: 135px;
-    padding-top: 56px;
+    padding-top: 40px;
     padding-bottom: 60px;
-    padding-right: 500px;
     background-repeat: no-repeat;
     background-position: right 40px top 40px;
 }
@@ -18,6 +17,7 @@
     display: grid;
     align-content: space-between;
     grid-gap: 32px;
+    padding-top: 16px;
 }
 
 .footer__header {
@@ -47,5 +47,26 @@
     &:hover,
     &:focus {
         color: var(--color-primary-light);
+    }
+}
+
+.footer__img-wrapper {
+    margin-left: auto;
+    margin-bottom: -60px;
+}
+
+@media (max-width: $tablet) {
+    .footer__wrapper  {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer__img-wrapper {
+        //justify-self: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        img {
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
 }
