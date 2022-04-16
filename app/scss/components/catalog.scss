@@ -49,6 +49,7 @@
 @media (max-width: 767px) {
     .catalog__wrapper {
         grid-row-gap: 42px;
+        justify-items: center;
         padding-top: 42px;
         padding-bottom: 42px;             
     }
@@ -68,5 +69,10 @@
 
     .catalog__pagination {
         padding-top: 0;
+    }
+
+    .catalog__cards {
+        max-width: 270px;
+        
     }
 }
