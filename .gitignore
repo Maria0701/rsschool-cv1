@@ -1,5 +1,6 @@
 /node_modules
 /app
+/build
 gulpfile.js
 package-lock.json
 package.json
