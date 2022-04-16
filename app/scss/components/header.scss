@@ -46,6 +46,7 @@
     }
 
     .header__toggler {
+        z-index: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -55,6 +56,7 @@
         height: 22px;
         background-color: transparent;
         border: 0;
+        transition: transform 0.3s ease-in-out;
 
         span {
             display: block;
@@ -66,6 +68,11 @@
 
     .header--inside .header__toggler span {
         background-color: #000000;
+    }
+
+    .header__logo {
+        right: 0;
+        transition: right 0.3s ease-in-out;
     }
 }
 
