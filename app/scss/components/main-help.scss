@@ -43,6 +43,14 @@
     }
 }
 
+@media (max-width: 1279px) {
+    .help__list {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 30px;
+    }
+}
+
 @media (max-width: 767px) {
     .help__wrapper {
         padding-top: 42px;
