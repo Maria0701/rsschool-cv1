@@ -78,10 +78,5 @@
 }
 
 .button-circle--active {
-    background-color: var(--color-primary);
-
-    &:hover,
-    &:focus {
-        background-color: var(--color-primary-light);
-    }
+    background-color: var(--color-primary);    
 }
