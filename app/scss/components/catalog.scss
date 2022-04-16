@@ -5,6 +5,7 @@
 .catalog__wrapper {
     display: grid;
     grid-row-gap: 60px;
+    justify-items: center;
     padding-top: var(--padding-top);
     padding-bottom: var(--padding-bottom);
 }
@@ -16,17 +17,18 @@
 
 .catalog__cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 270px);
     grid-column-gap: 40px;
     grid-row-gap: 30px;
+    justify-content: center;
 }
 
 @media (max-width: 1279px) {
     .catalog__cards {
         grid-template-columns: repeat( auto-fit, minmax(0, 270px) );
         grid-column-gap: 40px;
-        grid-row-gap: 30px;
-        justify-content: center;
+        grid-row-gap: 30px;        
+        max-width: 580px; 
     }
 
     .catalog__wrapper {
@@ -49,6 +51,7 @@
 @media (max-width: 767px) {
     .catalog__wrapper {
         grid-row-gap: 42px;
+        
         padding-top: 42px;
         padding-bottom: 42px;             
     }
@@ -68,5 +71,9 @@
 
     .catalog__pagination {
         padding-top: 0;
+    }
+
+    .catalog__cards {
+        max-width: 270px;        
     }
 }
