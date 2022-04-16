@@ -42,3 +42,36 @@
         letter-spacing: 0.06em;
     }
 }
+
+@media (max-width: 767px) {
+    .help__wrapper {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+
+    .help__h2 {
+        font-size: 25px;
+        line-height: 130%;
+        margin-bottom: 42px;
+    }
+
+    .help__list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 30px;
+    }
+
+    .help__item {
+        grid-row-gap: 20px;
+    }
+
+    .help__item p {
+        font-size: 15px;
+        line-height: 110%;
+    }
+
+    .help__item svg {
+        width: 50px;
+        height: 50px;
+    }
+}
