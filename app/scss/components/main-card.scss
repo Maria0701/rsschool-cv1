@@ -68,6 +68,7 @@
     margin-bottom: 0;
     font-size: 12px;
     line-height: 150%;
+    font-style: italic;
     color: var(--color-dark-m);
 }
 
@@ -87,5 +88,50 @@
 
     .card__img-wrapper {
         order: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .card__wrapper {
+        padding-top: 42px;
+        padding-bottom: 42px;
+        padding-left: 20px;
+        padding-right: 20px;
+        grid-gap: 42px;
+    }
+
+    .card__h2 {
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+    }
+
+    .card__content {
+        grid-gap: 20px;
+        justify-items: center;
+    }
+
+    .card__bank {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 160%;
+        text-align: center;
+    }
+
+    .card__bank-details {
+        font-size: 15px;
+        line-height: 110%;
+        letter-spacing: 0.06em;
+    }
+
+    .card__details {
+        font-size: 12px;
+        line-height: 18px;
+        text-align: justify;
+    }
+
+    .card__img-wrapper {
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }
