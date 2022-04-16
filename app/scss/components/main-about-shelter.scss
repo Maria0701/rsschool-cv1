@@ -31,7 +31,7 @@
     flex-shrink: 0;
 }
 
-@media (max-width: $tablet) {
+@media (max-width: 1279px) {
     .about__wrapper {
         flex-direction: column;
         align-items: center;
@@ -47,7 +47,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .about__wrapper {
         padding-top: 42px;
         padding-bottom: 42px;

@@ -60,7 +60,7 @@
     transform: translateY(-50%);
 }
 
-@media (max-width: $tablet) {
+@media (max-width: 1279px) {
 
     .slider {
         padding-left: 64px;
@@ -73,10 +73,10 @@
 }
 
 
-@media (max-width: 600px)  {
+@media (max-width: 767px)  {
     .slider {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .slider__arrow {

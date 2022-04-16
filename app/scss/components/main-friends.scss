@@ -19,7 +19,13 @@
     margin-bottom: 60px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1279px) {
+    .main-friends__slider {
+        width: 708px;
+    }
+}
+
+@media (max-width: 767px) {
     .main-friends__wrapper {
         padding-top: 42px;
         padding-bottom: 42px;
@@ -33,5 +39,6 @@
 
     .main-friends__slider {
         margin-bottom: 42px;
+        width: 270px;
     }
 }

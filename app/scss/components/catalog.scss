@@ -21,7 +21,7 @@
     grid-row-gap: 30px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1279px) {
     .catalog__cards {
         grid-template-columns: repeat( auto-fit, minmax(0, 270px) );
         grid-column-gap: 40px;
@@ -37,9 +37,7 @@
     .catalog__pagination {
         padding-top: 10px;
     }
-}
 
-@media (max-width: $tablet) {
     .catalog__card {
         &:last-child,
         &:nth-last-child(2) {
@@ -48,7 +46,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .catalog__wrapper {
         grid-row-gap: 42px;
         padding-top: 42px;
