@@ -20,3 +20,55 @@
     grid-column-gap: 40px;
     grid-row-gap: 30px;
 }
+
+@media (max-width: 1000px) {
+    .catalog__cards {
+        grid-template-columns: repeat( auto-fit, minmax(0, 270px) );
+        grid-column-gap: 40px;
+        grid-row-gap: 30px;
+        justify-content: center;
+    }
+
+    .catalog__wrapper {
+        grid-row-gap: 30px;
+        padding-bottom: 76px;
+    }
+
+    .catalog__pagination {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: $tablet) {
+    .catalog__card {
+        &:last-child,
+        &:nth-last-child(2) {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog__wrapper {
+        grid-row-gap: 42px;
+        padding-top: 42px;
+        padding-bottom: 42px;             
+    }
+
+    .catalog__title {
+        font-size: 25px;
+        line-height: 130%;
+    }
+
+    .catalog__card {
+        &:nth-last-child(5),
+        &:nth-last-child(4),
+        &:nth-last-child(3) {
+            display: none;
+        }
+    }
+
+    .catalog__pagination {
+        padding-top: 0;
+    }
+}
