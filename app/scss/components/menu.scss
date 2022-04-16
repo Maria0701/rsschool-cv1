@@ -93,14 +93,7 @@
         right: 53px;
         top: 50px;
         transform: rotate(90deg);
-    }
-
-    .header.opened .header__logo {
-        position: absolute;
-        right: 106px;
-        top: 30px;
-        z-index: 2;
-    }
+    }    
 
     .header.opened .header__menu {
         right: 0;
