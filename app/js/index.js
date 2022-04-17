@@ -2,6 +2,8 @@ import { CreatePet } from "./components/createPopup";
 import { preventEvt } from "./components/evtPrevent";
 import { menuOpener } from "./components/menuOpener";
 
+const URL = 'http://localhost:3000/js/pets.json';
+
 try {
     const opener = document.querySelector('.js-toggler');
     const menuElt = document.querySelector('.header__menu');  
@@ -35,7 +37,7 @@ try {
         if (target) {
             evt.preventDefault();
             const petName = target.querySelector('.friend__name').textContent;
-            const petPopup = new CreatePet(petName);
+            const petPopup = new CreatePet(petName, URL);
         }
     }
 

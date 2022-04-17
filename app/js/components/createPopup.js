@@ -1,8 +1,31 @@
+const elementInside = ({img, name,type, breed, description, age, inoculations, diseases, parasites}) => {
+    return `
+        <button class="popup__button button-circle">
+            <svg width="12" height="12">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+            </svg>
+        </button>
+        <div class="popup__img-wrapper">
+            <img class="popup__img" src="${img}" alt="${name}">
+        </div>
+        <div class="popup__content">
+            <div class="popup__name">${name}</div>
+            <div class="popup__kind">${type} - ${breed}</div>
+            <div class="popup__text">${description}</div>
+            <ul class="popup__list">
+                <li class="popup__item">Age: <span>${age}</span></li>
+                <li class="popup__item">Inoculations: <span>${inoculations.join(', ')}</span></li>
+                <li class="popup__item">Diseases: <span>${diseases.join(', ')}</span></li>
+                <li class="popup__item">Parasites: <span>${parasites.join(', ')}</span></li>
+            </ul>
+        </div>
+    `}; 
+
 export class CreatePet {
-    constructor(petName) {
+    constructor(petName, url) {
         this.petName = petName;
         this.elt = null;
-        this.url = 'http://localhost:3000/js/pets.json';
+        this.url = url;
         this.overlay = document.querySelector('.overlay');
         this.closeElt = null;
         this.closeHandler = this.closeHandler.bind(this)
@@ -25,7 +48,7 @@ export class CreatePet {
         });
     }
 
-    appendElt(elt, place = document.querySelector('body') ) {
+    appendElt(elt, place = document.querySelector('body')) {
         return place.append(elt);    
     }
 
@@ -43,32 +66,10 @@ export class CreatePet {
         this.elt = null;
     }
 
-    createElt({img, name,type, breed, description, age, inoculations, diseases, parasites}) {
+    createElt(obg) {
         this.elt = document.createElement('div');
         this.elt.classList.add('popup')
-        this.elt.insertAdjacentHTML('beforeend',`
-        <div class="popup">
-            <button class="popup__button button-circle">
-                <svg width="12" height="12">
-                    <use xlink:href="img/sprite.svg#icon-cross"></use>
-                </svg>
-            </button>
-            <div class="popup__img-wrapper">
-                <img class="popup__img" src="${img}" alt="${name}">
-            </div>
-            <div class="popup__content">
-                <div class="popup__name">${name}</div>
-                <div class="popup__kind">${type} - ${breed}</div>
-                <div class="popup__text">${description}</div>
-                <ul class="popup__list">
-                    <li class="popup__item">Age: <span>${age}</span></li>
-                    <li class="popup__item">Inoculations: <span>${inoculations.join(', ')}</span></li>
-                    <li class="popup__item">Diseases: <span>${diseases.join(', ')}</span></li>
-                    <li class="popup__item">Parasites: <span>${parasites.join(', ')}</span></li>
-                </ul>
-            </div>
-        </div>
-        `); 
+        this.elt.insertAdjacentHTML('beforeend',elementInside(obg)); 
         return this.elt;
     }
 }
