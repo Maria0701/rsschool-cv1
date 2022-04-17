@@ -1,3 +1,4 @@
+import { CreatePet } from "./components/createPopup";
 import { preventEvt } from "./components/evtPrevent";
 import { menuOpener } from "./components/menuOpener";
 
@@ -22,6 +23,23 @@ try {
             preventEvt(item, 'click');
         }
     })
+} catch(e) {
+    console.log(e);
+}
+
+try {
+    const cardsElt = document.querySelector('.slider__list');
+
+    const cardClickHandler = (evt) => {
+        const target = evt.target.closest('.friend-card');
+        if (target) {
+            evt.preventDefault();
+            const petName = target.querySelector('.friend__name').textContent;
+            const petPopup = new CreatePet(petName);
+        }
+    }
+
+    cardsElt.addEventListener('click', cardClickHandler);
 } catch(e) {
     console.log(e);
 }

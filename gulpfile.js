@@ -95,7 +95,7 @@ gulp.task('sprite', function() {
       'app/fonts/**/*.{woff,woff2}',
       'app/*.ico',
       'app/img/**/*.{png,jpg,svg,webp}',
-      'app/js/**/*.{json}',
+      'app/js/*.json',
     ], {
       base: 'app'
     })
