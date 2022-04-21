@@ -23,7 +23,7 @@
 .main-top__h1 {
     margin-top: 0;
     margin-bottom: 42px;
-    width: 310px;
+    max-width: 310px;
     font-family: var(--font-georgia);
     font-style: normal;
     font-size: 44px;
@@ -96,7 +96,7 @@
         font-size: 15px;
         line-height: 160%;
         text-align: center;
-        margin-bottom: 0;
+        margin-bottom: -25px;
     }
 
     .main-top__content {
