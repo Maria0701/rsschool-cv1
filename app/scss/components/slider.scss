@@ -11,10 +11,12 @@
 }
 
 .slider__list {
+    position: relative;
     display: grid;
     grid-auto-flow: column;
     grid-gap: 90px;
     grid-auto-columns: minmax(270px, 270px);
+    left: -1080px;
 }
 
 .slider__arrow {
@@ -69,14 +71,20 @@
 
     .slider__list {
         grid-gap: 40px;
+        left: -620px
     }
 }
+
 
 
 @media (max-width: 767px)  {
     .slider {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .slider__list {
+        left: -310px
     }
 
     .slider__arrow {

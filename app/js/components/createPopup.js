@@ -1,3 +1,5 @@
+import { getJson } from "./getData";
+
 const elementInside = ({img, name,type, breed, description, age, inoculations, diseases, parasites}) => {
     return `
         <button class="popup__button button-circle">
@@ -22,30 +24,26 @@ const elementInside = ({img, name,type, breed, description, age, inoculations, d
     `}; 
 
 export class CreatePet {
-    constructor(petName, url) {
-        this.petName = petName;
+    constructor(id, url) {
+        this.id = id;
         this.elt = null;
         this.url = url;
         this.overlay = document.querySelector('.overlay');
         this.closeElt = null;
-        this.closeHandler = this.closeHandler.bind(this)
+        this.closeHandler = this.closeHandler.bind(this);
+        this.callback = this.callback.bind(this);
         this.init();
     }
 
     init() {
-        return fetch(this.url, {
-            headers : { 
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            }
-         })
-        .then( res => res.json())
-        .then((data) => {
-             const pet = data.find(item => item.name === this.petName);
-             this.appendElt(this.createElt(pet));
-             if (this.overlay) this.overlay.classList.add('overlay--active');
-             this.startEventListeners();
-        });
+        return getJson(this.url, this.callback);
+    }
+
+    callback(data) {
+        const pet = data.find(item => item.id === this.id);
+        this.appendElt(this.createElt(pet));
+        if (this.overlay) this.overlay.classList.add('overlay--active');
+        this.startEventListeners();
     }
 
     appendElt(elt, place = document.querySelector('body')) {
