@@ -18,8 +18,17 @@
     }
 }
 
-@media(max-width: 1279px) {
+@keyframes move-top {
+    from {
+        transform: translate3d(0,0,0);
+    }
 
+    to {
+        transform: translate3d(0,-900px,0);
+    }
+}
+
+@media(max-width: 1279px) {
     @keyframes move-right {
         from {
             left: 0px;
@@ -39,6 +48,17 @@
             left: 0;
         }
     }
+
+    @keyframes move-top {
+        from {
+            transform: translate3d(0,0,0);
+        }
+    
+        to {
+            transform: translate3d(0,-1360px,0);
+        }
+    }
+    
 }
 
 @media(max-width: 767px) {
@@ -62,6 +82,16 @@
             left: 0;
         }
     }
+
+    @keyframes move-top {
+        from {
+            transform: translate3d(0,0,0);
+        }
+    
+        to {
+            transform: translate3d(0,-1360px,0);
+        }
+    }
 }
 
 
@@ -72,6 +102,11 @@
 
 .transition-left {
     animation-name: move-left;
+    animation-duration: 3s;
+}
+
+.transition-top {
+    animation-name: move-top;
     animation-duration: 3s;
 }
 

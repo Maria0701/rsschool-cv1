@@ -51,7 +51,9 @@
     transition: background-color 0.3s ease-in-out;
 
     &:hover,
-    &:focus {
+    &:focus, 
+    .overlay:hover ~ .popup &,
+    .overlay:active ~ .popup & {
         background-color: var(--color-primary);
         cursor: pointer;
     }
@@ -76,6 +78,7 @@
         display: block;
     }
 }
+
 
 .button-circle--active {
     background-color: var(--color-primary);    

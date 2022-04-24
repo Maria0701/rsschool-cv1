@@ -33,6 +33,13 @@
 }
 
 @media (max-width: 767px) {
+    .header.opened {
+        z-index: 3;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 118px;
+    }
+    
     .header__menu {
         position: fixed;
         top: 0;
@@ -81,7 +88,7 @@
         }
 
         .header.opened & {
-            position: absolute;
+            position: fixed;
             right: 53px;
             top: 50px;
             transform: rotate(90deg);
@@ -109,7 +116,7 @@
         transition: right 0.3s ease-in-out;
 
         .header.opened & {
-            position: absolute;
+            position: fixed;
             right: 106px;
             top: 30px;
             z-index: 2;

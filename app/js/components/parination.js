@@ -5,6 +5,22 @@ const URL = 'http://localhost:3000/js/pets.json';
 const NUMBER_OF_ITEMS = 48;
 
 
+const shuffle = (arr) => arr.sort(()=>Math.random()-0.5);
+
+const shuffleWithNumberOnPage = (arr, num) => {               
+    let temporaryArr = [];
+    let tempArr = [];
+    arr.forEach((item, index) => {                
+        tempArr.push(item);
+        if ((index + 1) % num === 0) {
+            temporaryArr = [...temporaryArr, ...shuffle(tempArr)];
+            tempArr = [];
+        }
+    });
+
+    return temporaryArr;
+};
+
 export const createPagination = (container, pagination) => {
     const length = getNumberOfItems('catalog');
     const START_PAGE = pagination.querySelector('.first');
@@ -20,8 +36,8 @@ export const createPagination = (container, pagination) => {
     let newArr = [];
     let currentItemsArr = [];
 
-    const createTemplates = (itemsList) => {  
-        console.log(startNum, numberOnPage);       
+    const createTemplates = (itemsList) => {
+        const num = numberOnPage * 2;
         for (let i = startNum; i <= numberOnPage * page; i++) {            
             const pet = itemsList[i - 1];            
             createPetsElms(pet);
@@ -29,7 +45,8 @@ export const createPagination = (container, pagination) => {
     };
 
     const createPetsArray = (data) => {
-       newArr = [...data,...data, ...data, ...data, ...data, ...data];
+        newArr = [...data,...data, ...data, ...data, ...data, ...data];
+        newArr = shuffleWithNumberOnPage(newArr, length)
        return newArr;
     } 
     
@@ -50,12 +67,20 @@ export const createPagination = (container, pagination) => {
         createTemplates(data);
     });
 
-    const pageTurnHandler = (evt) => {
-        evt.preventDefault();
-        [...currentItemsArr].forEach((item)=> {            
+    const animationEndHandler = (evt) => {
+        container.classList.remove('transition-top');
+        [...currentItemsArr.slice(0, numberOnPage)].forEach((item)=> {            
             item.removeElt();
             currentItemsArr.shift();
         });
+    }
+
+    const pageTurnHandler = (evt) => {
+        evt.preventDefault();
+       /* */
+
+        container.classList.add('transition-top');
+        container.addEventListener('animationend', animationEndHandler)
 
         const target = evt.target;
         switch (true) {

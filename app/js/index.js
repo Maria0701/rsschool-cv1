@@ -25,7 +25,7 @@ try {
     const menuLinksLength = menuLinks.length;
 
     menuLinks.forEach((item, id) => {
-        if (id === (menuLinksLength - 1) || id === (menuLinksLength - 2)) {
+        if (id === (menuLinksLength - 2)) {
             preventEvt(item, 'click');
         }
     })
@@ -64,7 +64,17 @@ try {
     const paginationElt = document.querySelector('.pagination');
     if (pageElt) {
         pageElt.innerHTML = '';
-        createPagination(pageElt, paginationElt);        
+        createPagination(pageElt, paginationElt); 
+        
+        const cardClickHandler = (evt) => {
+            const target = evt.target.closest('.friend-card');
+            if (target) {
+                evt.preventDefault();
+                const petName = Number(target.dataset.id);
+                const petPopup = new CreatePet(petName, URL);
+            }
+        }
+        pageElt.addEventListener('click', cardClickHandler);
     };
 } catch(e) {
     console.log(e);

@@ -23,6 +23,8 @@ const elementInside = ({img, name,type, breed, description, age, inoculations, d
         </div>
     `}; 
 
+const bodyElement = document.querySelector('body');
+
 export class CreatePet {
     constructor(id, url) {
         this.id = id;
@@ -42,12 +44,13 @@ export class CreatePet {
     callback(data) {
         const pet = data.find(item => item.id === this.id);
         this.appendElt(this.createElt(pet));
+        bodyElement.classList.add('overflow-hidden');
         if (this.overlay) this.overlay.classList.add('overlay--active');
         this.startEventListeners();
     }
 
-    appendElt(elt, place = document.querySelector('body')) {
-        return place.append(elt);    
+    appendElt(elt, place = this.overlay) {
+        return place.after(elt);    
     }
 
     startEventListeners() {
@@ -58,6 +61,7 @@ export class CreatePet {
     
     closeHandler() {
         if (this.overlay) this.overlay.classList.remove('overlay--active');
+        bodyElement.classList.remove('overflow-hidden');
         this.overlay.removeEventListener('click', this.closeHandler);
         this.closeElt = null;
         this.elt.parentNode.removeChild(this.elt);
