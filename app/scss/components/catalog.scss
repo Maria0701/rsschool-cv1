@@ -39,13 +39,6 @@
     .catalog__pagination {
         padding-top: 10px;
     }
-
-    .catalog__card {
-        &:last-child,
-        &:nth-last-child(2) {
-            display: none;
-        }
-    }
 }
 
 @media (max-width: 767px) {
@@ -61,13 +54,6 @@
         line-height: 130%;
     }
 
-    .catalog__card {
-        &:nth-last-child(5),
-        &:nth-last-child(4),
-        &:nth-last-child(3) {
-            display: none;
-        }
-    }
 
     .catalog__pagination {
         padding-top: 0;

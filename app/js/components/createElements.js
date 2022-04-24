@@ -17,7 +17,7 @@ const cardElt = ({id, img, name}) => {
 };
 
 export class CreateElements {
-    constructor(container, url, id) {
+    constructor(container, url = 0, id = 0) {
         this.container = container;
         this.url = url;
         this.id = id;
@@ -34,9 +34,15 @@ export class CreateElements {
         this.createTemplate(pet);
     }
 
-    createTemplate(pet, place) {
+    createTemplate({
+        pet = null, 
+        place = 'after',
+        tagName = 'div',
+        className = 'slider__item',
+        where = 'beforeend',
+    }) {
         const content = this.createElementContent(pet);       
-        const elt = this.createElt('div', 'slider__item', 'beforeend', content);
+        const elt = this.createElt(tagName, className, where, content);
         place === 'before' ? this.prependElt(elt, this.container) : this.appendElt(elt, this.container);
     }
 

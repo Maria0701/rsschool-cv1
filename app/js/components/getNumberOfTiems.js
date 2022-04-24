@@ -13,15 +13,15 @@ export const getNumberOfItems = (type) => {
           break;
         case 'catalog':
             if  (window.matchMedia("(max-width: 767px)").matches) {
-                num = 1;
+                num = 3;
             } else if (window.matchMedia("(max-width: 1279px)").matches) {
-                num = 2;
+                num = 6;
             } else {
-                num = 4;
+                num = 8;
             }
           break;
         default:
             alert( "Нет таких значений" );
-    }
+    };
     return num;
-}
+};

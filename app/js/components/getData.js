@@ -7,10 +7,10 @@ export const getJson = (urlItem, callback) => {
      })
     .then( res => res.json())
     .then((data) => {     
-        callback(data);
+        return callback(data);        
     });
 };
 
 export const getRandomArbitrary = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
-}
+};
