@@ -34,7 +34,7 @@ input::-webkit-inner-spin-button {
 @include fontface('Arial', 'ArialMT', ArialMT, 400, normal);
 @include fontface('Arial', 'Arial-BoldMT', Arial-BoldMT, 700, normal);
 @include fontface('Georgia', 'Georgia', Georgia, 400, normal);
-@include fontface('Georgia', 'Georgia', Georgia, 700, normal);
+@include fontface('Georgia', 'Georgia-Bold', Georgia-Bold, 700, normal);
 
 body {
     position: relative;
@@ -96,6 +96,11 @@ img {
     max-width: $desktop;
     margin-left: auto;
     margin-right: auto;    
+}
+
+.overflow-hidden  {
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 

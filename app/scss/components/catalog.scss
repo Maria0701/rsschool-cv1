@@ -3,6 +3,7 @@
 }
 
 .catalog__wrapper {
+    position: relative;
     display: grid;
     grid-row-gap: 60px;
     justify-items: center;
@@ -15,7 +16,13 @@
     text-align: center;
 }
 
+.catalog__cards-wrapper {
+    overflow: hidden;
+    max-height: 900px;
+}
+
 .catalog__cards {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(4, 270px);
     grid-column-gap: 40px;
@@ -40,11 +47,8 @@
         padding-top: 10px;
     }
 
-    .catalog__card {
-        &:last-child,
-        &:nth-last-child(2) {
-            display: none;
-        }
+    .catalog__cards-wrapper {
+        max-height: 1361px;
     }
 }
 
@@ -61,13 +65,6 @@
         line-height: 130%;
     }
 
-    .catalog__card {
-        &:nth-last-child(5),
-        &:nth-last-child(4),
-        &:nth-last-child(3) {
-            display: none;
-        }
-    }
 
     .catalog__pagination {
         padding-top: 0;
