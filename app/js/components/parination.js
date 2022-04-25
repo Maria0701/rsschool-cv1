@@ -17,7 +17,7 @@ const shuffleWithNumberOnPage = (arr, num) => {
             tempArr = [];
         }
     });
-
+    console.log(temporaryArr);
     return temporaryArr;
 };
 
