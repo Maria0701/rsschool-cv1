@@ -5,6 +5,7 @@
 
 .help__h2 {
     margin-bottom: 60px;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -12,6 +13,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    grid-column-gap: 120px;
     grid-row-gap: 55px;
     margin: 0;
     padding: 0;
@@ -20,7 +22,7 @@
 
 .help__item {
     display: flex;
-    flex-basis: 230px;
+    //flex-basis: 230px;
     flex-shrink: 0;
     flex-direction: column;
     align-items: center;
@@ -46,8 +48,10 @@
 @media (max-width: 1279px) {
     .help__list {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-gap: 30px;
+        grid-template-columns: repeat(3,auto);
+        grid-gap: 74px;
+        grid-row-gap: 55px;
+        justify-items: center;
     }
 }
 
@@ -57,7 +61,7 @@
         padding-bottom: 42px;
     }
 
-    .help__h2 {
+    .help__h2 {        
         font-size: 25px;
         line-height: 130%;
         margin-bottom: 42px;

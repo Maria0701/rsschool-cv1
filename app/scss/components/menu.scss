@@ -56,8 +56,41 @@
 }
 
 @media (max-width: 1279px) {
-
     .header--main {
         top: 0;
     }
+}
+
+@media (max-width: 767px) {  
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-gap: 40px;
+        padding-top: 70px;
+    }
+
+    .menu__link {
+        font-size: 32px;
+        line-height: 160%;
+
+        .header--inside.opened & {
+            color: var(--color-dark-s);
+    
+            &:hover,
+            &:focus {
+                color: var(--color-light-s);
+            }
+        }
+    }
+
+    .menu__link--active::after {
+
+        .header--inside.opened & {
+            color: var(--color-primary);
+        } 
+    }
+        
+
+ 
 }
