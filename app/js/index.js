@@ -5,7 +5,7 @@ import { menuOpener } from "./components/menuOpener";
 import { createPagination } from "./components/parination";
 import { sliderMover } from "./components/slider";
 
-const URL = 'http://localhost:3000/js/pets.json';
+const URL = './js/pets.json';
 const cardsElt = document.querySelector('.slider__list');
 
 try {
@@ -64,7 +64,7 @@ try {
     const paginationElt = document.querySelector('.pagination');
     if (pageElt) {
         pageElt.innerHTML = '';
-        createPagination(pageElt, paginationElt); 
+        createPagination(pageElt, paginationElt, URL); 
         
         const cardClickHandler = (evt) => {
             const target = evt.target.closest('.friend-card');
