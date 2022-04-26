@@ -55,12 +55,14 @@
     }
 
     .about__h2 {
+        max-width: 300px;
         text-align: center;
         font-size: 25px;
         line-height: 130%;
     }
 
     .about__content {
+        justify-items: center;
         padding-left: 15px;
         padding-right: 15px;
     }

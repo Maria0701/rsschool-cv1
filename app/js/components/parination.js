@@ -1,7 +1,7 @@
 import { CreateElements } from "./createElements";
 import { getJson } from "./getData";
 import { getNumberOfItems } from "./getNumberOfTiems"
-const URL = 'http://localhost:3000/js/pets.json';
+//const URL = './js/pets.json';
 const NUMBER_OF_ITEMS = 48;
 
 
@@ -17,11 +17,11 @@ const shuffleWithNumberOnPage = (arr, num) => {
             tempArr = [];
         }
     });
-
+    console.log(temporaryArr);
     return temporaryArr;
 };
 
-export const createPagination = (container, pagination) => {
+export const createPagination = (container, pagination, url) => {
     const length = getNumberOfItems('catalog');
     const START_PAGE = pagination.querySelector('.first');
     const END_PAGE = pagination.querySelector('.last');
@@ -61,7 +61,7 @@ export const createPagination = (container, pagination) => {
         });
     };  
 
-    getJson(URL,createPetsArray)
+    getJson(url,createPetsArray)
     .then((data) => {
         newArr = data;
         createTemplates(data);
@@ -77,7 +77,6 @@ export const createPagination = (container, pagination) => {
 
     const pageTurnHandler = (evt) => {
         evt.preventDefault();
-       /* */
 
         container.classList.add('transition-top');
         container.addEventListener('animationend', animationEndHandler)

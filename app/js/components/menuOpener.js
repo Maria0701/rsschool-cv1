@@ -7,8 +7,6 @@ export function menuOpener (opener, elt, eltToOpen, closeElt) {
     const closeEl = closeElt || opener;
     const menuLinks = [...headerElt.querySelectorAll('.menu__link')];
 
-    
-
     function outOfAreaHandler(evt) {
         if (elt.contains(evt.target))  return;        
         closeHandler();
@@ -22,6 +20,7 @@ export function menuOpener (opener, elt, eltToOpen, closeElt) {
         overlay.removeEventListener('click', outOfAreaHandler);
         opener.addEventListener('click', openHandler);
         overlay.classList.remove('overlay--active');
+        menuLinks.forEach(item => item.removeEventListener('click', linksHahdler));
     }
 
     function openHandler() { 
@@ -32,6 +31,7 @@ export function menuOpener (opener, elt, eltToOpen, closeElt) {
         closeEl.addEventListener('click', closeHandler);
         overlay.addEventListener('click', outOfAreaHandler);
         overlay.classList.add('overlay--active');
+        menuLinks.forEach(item => item.addEventListener('click', linksHahdler));
     }
 
     function closeOtherElts() {
@@ -39,17 +39,25 @@ export function menuOpener (opener, elt, eltToOpen, closeElt) {
         if (opened && opened !==headerElt)  opened.classList.remove('opened');
     }
 
-    menuLinks[menuLinks.length - 1].addEventListener('click', (evt) => {
-        evt.preventDefault();
-        closeHandler();
-        const blockId = menuLinks[menuLinks.length - 1].getAttribute('href');
-        document.querySelector(blockId).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-         })
-        
+    function linksHahdler(evt) {
+        const target = evt.target.closest('.menu__link');
+        if (target.classList.contains('menu__link--active')) {
+            closeHandler();
+            return;
+        }
 
-    });
+        const blockId = target.getAttribute('href');
+        if (blockId.startsWith('#')) {
+            evt.preventDefault();
+            closeHandler();
+            document.querySelector(blockId).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })        
+        }    
+    }
+
+    
 
     opener.addEventListener('click', openHandler);
 }
