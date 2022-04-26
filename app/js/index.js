@@ -21,19 +21,6 @@ try {
 }
 
 try {
-    const menuLinks = document.querySelectorAll('.menu__link');
-    const menuLinksLength = menuLinks.length;
-
-    menuLinks.forEach((item, id) => {
-        if (id === (menuLinksLength - 2)) {
-            preventEvt(item, 'click');
-        }
-    })
-} catch(e) {
-    console.log(e);
-}
-
-try {
     if (cardsElt) {
         const cardClickHandler = (evt) => {
             const target = evt.target.closest('.friend-card');
